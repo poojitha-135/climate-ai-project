@@ -168,7 +168,7 @@ elif page == "Climate Analysis":
         values = [temperature, co2, rainfall]
 
         
-        fig, ax = plt.subplots(figsize=(5,3))  # width, height
+        fig, ax = plt.subplots(figsize=(3,3))  # width, height
 
         ax.bar(labels, values)
         ax.set_title("Climate Data Overview")
