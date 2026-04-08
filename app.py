@@ -34,26 +34,26 @@ if page == "Home":
     )
 
      with col2:
-    st.markdown(
-        """
-        <div style="background-color:#E3F2FD;padding:15px;border-radius:10px">
-        <h4 style="color:#1565C0;">🤖 AI Report</h4>
-        <p style="color:#0D47A1;">Generates sustainability insights</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        st.markdown(
+            """
+            <div style="background-color:#E3F2FD;padding:15px;border-radius:10px">
+            <h4 style="color:#1565C0;">🤖 AI Report</h4>
+            <p style="color:#0D47A1;">Generates sustainability insights</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
     with col3:
-    st.markdown(
-        """
-        <div style="background-color:#FFF3E0;padding:15px;border-radius:10px">
-        <h4 style="color:#EF6C00;">🌱 Sustainability</h4>
-        <p style="color:#E65100;">Supports climate decisions</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        st.markdown(
+            """
+            <div style="background-color:#FFF3E0;padding:15px;border-radius:10px">
+            <h4 style="color:#EF6C00;">🌱 Sustainability</h4>
+            <p style="color:#E65100;">Supports climate decisions</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
 # -----------------------------
 # HOW IT WORKS (NEW)
