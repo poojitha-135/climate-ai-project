@@ -173,9 +173,9 @@ elif page == "Climate Analysis":
         ax.bar(labels, values)
         ax.set_title("Climate Data Overview")
 
-st.pyplot(fig)
-
         st.pyplot(fig)
+
+        
 
 # -----------------------------
 # Footer
