@@ -164,16 +164,16 @@ elif page == "Climate Analysis":
 
         st.subheader("📊 Data Visualization")
 
-        labels = ["Temperature", "CO2", "Rainfall"]
-        values = [temperature, co2, rainfall]
+        col1, col2, col3 = st.columns([1,2,1])
 
+        with col2:
+            fig, ax = plt.subplots(figsize=(4,2.5), dpi=100)
         
-        fig, ax = plt.subplots(figsize=(3,3))  # width, height
-
-        ax.bar(labels, values)
-        ax.set_title("Climate Data Overview")
-
-        st.pyplot(fig)
+            ax.bar(labels, values)
+            ax.set_title("Climate Data Overview", fontsize=10)
+            ax.tick_params(labelsize=8)
+        
+            st.pyplot(fig, use_container_width=False)
 
         
 
