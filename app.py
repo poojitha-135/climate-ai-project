@@ -20,14 +20,40 @@ if page == "Home":
 
     col1, col2, col3 = st.columns(3)
 
-    with col1:
-        st.success("ML Analysis\n\nAnalyzes climate patterns")
+    col1, col2, col3 = st.columns(3)
 
-    with col2:
-        st.info(" AI Report\n\nGenerates sustainability insights")
+with col1:
+    st.markdown(
+        """
+        <div style="background-color:#E8F5E9;padding:15px;border-radius:10px">
+        <h4 style="color:#2E7D32;">📊 ML Analysis</h4>
+        <p style="color:#1B5E20;">Analyzes climate patterns</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-    with col3:
-        st.warning(" Sustainability\n\nSupports climate decisions")
+with col2:
+    st.markdown(
+        """
+        <div style="background-color:#E3F2FD;padding:15px;border-radius:10px">
+        <h4 style="color:#1565C0;">🤖 AI Report</h4>
+        <p style="color:#0D47A1;">Generates sustainability insights</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col3:
+    st.markdown(
+        """
+        <div style="background-color:#FFF3E0;padding:15px;border-radius:10px">
+        <h4 style="color:#EF6C00;">🌱 Sustainability</h4>
+        <p style="color:#E65100;">Supports climate decisions</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 # -----------------------------
 # HOW IT WORKS (NEW)
@@ -54,7 +80,14 @@ elif page == "How It Works":
 
     st.markdown("---")
 
-    st.info("This system simplifies complex climate analysis into understandable insights for better decision-making.")
+    st.markdown(
+    """
+    <div style="background-color:#E0F7FA;padding:15px;border-radius:10px;color:#006064;">
+    This system simplifies complex climate analysis into understandable insights for better decision-making.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
     st.markdown("##  How Risk is Analyzed")
 
     st.write("""
@@ -134,16 +167,18 @@ elif page == "Climate Analysis":
             st.subheader("📄 Sustainability Report")
             st.write(report)
 
-        st.markdown("---")
+        import matplotlib.pyplot as plt
 
         st.subheader("📊 Data Visualization")
-
-        data = pd.DataFrame({
-            "Parameter": ["Temperature", "CO2", "Rainfall"],
-            "Value": [temperature, co2, rainfall]
-        })
-
-        st.bar_chart(data.set_index("Parameter"))
+        
+        labels = ["Temperature", "CO2", "Rainfall"]
+        values = [temperature, co2, rainfall]
+        
+        fig, ax = plt.subplots()
+        ax.bar(labels, values)
+        ax.set_title("Climate Data Overview")
+        
+        st.pyplot(fig)
 
 # -----------------------------
 # Footer
