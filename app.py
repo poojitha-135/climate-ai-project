@@ -164,8 +164,12 @@ elif page == "Climate Analysis":
 
         st.subheader("📊 Data Visualization")
 
+        # ✅ ADD THIS (missing part)
+        labels = ["Temperature", "CO2", "Rainfall"]
+        values = [temperature, co2, rainfall]
+        
         col1, col2, col3 = st.columns([1,2,1])
-
+        
         with col2:
             fig, ax = plt.subplots(figsize=(4,2.5), dpi=100)
         
