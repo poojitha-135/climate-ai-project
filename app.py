@@ -22,7 +22,7 @@ if page == "Home":
 
     col1, col2, col3 = st.columns(3)
 
-with col1:
+    with col1:
     st.markdown(
         """
         <div style="background-color:#E8F5E9;padding:15px;border-radius:10px">
@@ -33,7 +33,7 @@ with col1:
         unsafe_allow_html=True
     )
 
-with col2:
+     with col2:
     st.markdown(
         """
         <div style="background-color:#E3F2FD;padding:15px;border-radius:10px">
@@ -44,7 +44,7 @@ with col2:
         unsafe_allow_html=True
     )
 
-with col3:
+    with col3:
     st.markdown(
         """
         <div style="background-color:#FFF3E0;padding:15px;border-radius:10px">
