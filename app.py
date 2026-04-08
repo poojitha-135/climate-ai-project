@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="EcoInsight AI", layout="wide")
 
@@ -20,20 +21,18 @@ if page == "Home":
 
     col1, col2, col3 = st.columns(3)
 
-    col1, col2, col3 = st.columns(3)
-
     with col1:
-    st.markdown(
-        """
-        <div style="background-color:#E8F5E9;padding:15px;border-radius:10px">
-        <h4 style="color:#2E7D32;">📊 ML Analysis</h4>
-        <p style="color:#1B5E20;">Analyzes climate patterns</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+        st.markdown(
+            """
+            <div style="background-color:#E8F5E9;padding:15px;border-radius:10px">
+            <h4 style="color:#2E7D32;">📊 ML Analysis</h4>
+            <p style="color:#1B5E20;">Analyzes climate patterns</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
-     with col2:
+    with col2:
         st.markdown(
             """
             <div style="background-color:#E3F2FD;padding:15px;border-radius:10px">
@@ -56,39 +55,39 @@ if page == "Home":
         )
 
 # -----------------------------
-# HOW IT WORKS (NEW)
+# HOW IT WORKS
 # -----------------------------
 elif page == "How It Works":
 
-    st.title(" How EcoInsight AI Works")
-
+    st.title("How EcoInsight AI Works")
     st.markdown("### 3 Simple Steps to Understand Climate Data")
 
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.markdown("### 1️ Input Climate Data")
+        st.markdown("### 1️⃣ Input Climate Data")
         st.write("Users enter environmental data such as temperature, CO₂ levels, and rainfall.")
 
     with col2:
-        st.markdown("### 2️ AI-Based Analysis")
+        st.markdown("### 2️⃣ AI-Based Analysis")
         st.write("Machine learning analyzes patterns and identifies environmental risk levels.")
 
     with col3:
-        st.markdown("### 3️ Report Generation")
+        st.markdown("### 3️⃣ Report Generation")
         st.write("Generative AI converts results into easy-to-understand sustainability insights.")
 
     st.markdown("---")
 
     st.markdown(
-    """
-    <div style="background-color:#E0F7FA;padding:15px;border-radius:10px;color:#006064;">
-    This system simplifies complex climate analysis into understandable insights for better decision-making.
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-    st.markdown("##  How Risk is Analyzed")
+        """
+        <div style="background-color:#E0F7FA;padding:15px;border-radius:10px;color:#006064;">
+        This system simplifies complex climate analysis into understandable insights for better decision-making.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown("## How Risk is Analyzed")
 
     st.write("""
 The system analyzes climate data using predefined thresholds and AI-based logic:
@@ -99,18 +98,14 @@ The system analyzes climate data using predefined thresholds and AI-based logic:
 
 This classification helps in identifying environmental risk levels quickly and effectively.
 """)
-    
-    
 
 # -----------------------------
 # CLIMATE ANALYSIS PAGE
 # -----------------------------
 elif page == "Climate Analysis":
 
-    st.title(" Climate Data Analysis")
-
+    st.title("Climate Data Analysis")
     st.markdown("Enter climate data to analyze environmental risk and generate insights.")
-
     st.markdown("---")
 
     col1, col2 = st.columns(2)
@@ -134,7 +129,7 @@ elif page == "Climate Analysis":
             return "Low"
 
     # -----------------------------
-    # LLM Report
+    # Report Generation
     # -----------------------------
     def generate_report(temp, co2, rain, risk):
         if risk == "High":
@@ -167,17 +162,15 @@ elif page == "Climate Analysis":
             st.subheader("📄 Sustainability Report")
             st.write(report)
 
-        import matplotlib.pyplot as plt
-
         st.subheader("📊 Data Visualization")
-        
+
         labels = ["Temperature", "CO2", "Rainfall"]
         values = [temperature, co2, rainfall]
-        
+
         fig, ax = plt.subplots()
         ax.bar(labels, values)
         ax.set_title("Climate Data Overview")
-        
+
         st.pyplot(fig)
 
 # -----------------------------
