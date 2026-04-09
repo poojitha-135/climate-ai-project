@@ -65,15 +65,15 @@ elif page == "How It Works":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.markdown("### 1️⃣ Input Climate Data")
+        st.markdown("### 1.Input Climate Data")
         st.write("Users enter environmental data such as temperature, CO₂ levels, and rainfall.")
 
     with col2:
-        st.markdown("### 2️⃣ AI-Based Analysis")
+        st.markdown("### 2.AI-Based Analysis")
         st.write("Machine learning analyzes patterns and identifies environmental risk levels.")
 
     with col3:
-        st.markdown("### 3️⃣ Report Generation")
+        st.markdown("### 3.Report Generation")
         st.write("Generative AI converts results into easy-to-understand sustainability insights.")
 
     st.markdown("---")
